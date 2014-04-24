@@ -23,12 +23,11 @@ var MainRouter = Backbone.Router.extend({
 	showShops: function(keyword){
 		console.log('showShops is being called by the router')
 		// $('.etsy-items').html('');
-		if (keyword) {
-			this.items.url = "https://api.etsy.com/v2/listings/active.js?keywords="+ keyword +"&includes=Images&api_key=kr9rjq7dc9c24jv6fccq2hus&callback=?"			
-		}
+		// if (keyword) {
+		// 	this.items.url = "https://api.etsy.com/v2/listings/active.js?keywords="+ keyword +"&includes=Images&api_key=kr9rjq7dc9c24jv6fccq2hus&callback=?"			
+		// }
 		this.items.fetch();
 
-		console.log('Should have sent some data to tiny server')
 	},
 
 	pushData: function(keyword){

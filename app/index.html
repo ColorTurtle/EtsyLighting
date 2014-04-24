@@ -36,20 +36,28 @@
             </div>
         </div>
         <div class="container">
+            <div class="intro-text">
+                <p><strong>I like Etsy. I love interior design. I'm a sucker for lighting.</strong></p> 
+                <p>So I made a site that I could stare at for hours. This pulls the most recent items posted to Etsy from the 'Industrial Lighting' category*. You'll see the items changer everytime you refresh the page.</p>
+                <h6>*As you will probably notice, the 'categories' on Etsy are pretty flexible for their sellers. The result is sometimes you get things you just aren't looking for.</h6>
+            </div>
             <div class="row etsy-items">
             </div>
-
-
-            <div class="footer">
-                <p>♥ from the Yeoman team</p>
+            <div class="js-mainViewBox">
             </div>
 
         </div>
         <!-- Begin Template for Items -->
         <script type="text/template" id="etsy-item-template">
             <img src="<%= this.model.get('Images')[0].url_75x75 %>">
-            <h4 class="text-muted">Price: <%= this.model.get('price') %></h4>
+            <h4 class="text-muted">Price: $<%= this.model.get('price') %></h4>
         </script>
+
+        <script type="text/template" id="etsy-MainView-template">
+            <img src="<%= this.model.get('Images')[0].url_fullxfull %>">
+            <h4>Price: $<%= this.model.get('price') %></h4>
+            <p>$<%= this.model.get('description') %></p>
+        </script>        
 
 
         <!-- build:js scripts/vendor.js -->

@@ -22,6 +22,20 @@ var ListView = Backbone.View.extend({
 		var link = '#/items/' + id;
 		this.$el.attr({href: link});
 	}
-
 });
 
+var MainView = Backbone.View.extend({
+	className: "item-mainview",
+	
+	renderedTemplate: _.template($('#etsy-MainView-template').text()),
+
+	initialize: function(){
+		this.render();
+		$('.js-mainViewBox').html( this.el )
+
+	}, 
+
+	render: function(){
+		this.$el.html(this.renderedTemplate(this.model))
+	}
+});
