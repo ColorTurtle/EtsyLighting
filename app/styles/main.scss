@@ -93,12 +93,16 @@ h4 {
     margin: 30px 0;
 }
 
-.js-mainViewBox {
+.item-mainview {
     position: absolute;
     top: 0;
     text-align: center;
     background: rgba(204, 199, 199, 0.93);
     padding: 50px;
+    
+    &.unhide {
+        display: block;
+    }
 
     img {
         width: 50%;

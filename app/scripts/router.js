@@ -1,6 +1,7 @@
 var MainRouter = Backbone.Router.extend({
 	routes: {
 		""								: "showShops",
+		"#"								: "showShops",
 		"shops"						: "showShops",
 		"shops/:keyword"	: "showShops",
 		"shops/:keyword"	: "pushData",

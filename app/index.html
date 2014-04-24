@@ -31,8 +31,10 @@
 
         <div class="header">
             <div class="container">
-                <img src="images/bulb-blue.png">
-                <h3 class="text-muted">Etsy Lights</h3>
+                <a href="#">
+                    <img src="images/bulb-blue.png">
+                    <h3 class="text-muted">Etsy Lights</h3>
+                </a>
             </div>
         </div>
         <div class="container">
@@ -54,6 +56,7 @@
         </script>
 
         <script type="text/template" id="etsy-MainView-template">
+            <a href="#" class="close-window"><span class="pull-right">Close</span></a>
             <img src="<%= this.model.get('Images')[0].url_fullxfull %>">
             <h4>Price: $<%= this.model.get('price') %></h4>
             <p>$<%= this.model.get('description') %></p>
