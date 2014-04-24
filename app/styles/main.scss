@@ -94,21 +94,57 @@ h4 {
 }
 
 .item-mainview {
-    position: absolute;
-    top: 0;
     text-align: center;
-    background: rgba(204, 199, 199, 0.93);
-    padding: 50px;
-    
-    &.unhide {
-        display: block;
-    }
+    padding: 10px;
+    padding-bottom: 0px;
 
     img {
-        width: 50%;
+        width: 100%;
+    }
+
+    .description {
+        height: 200px;
+        overflow-y: scroll;
+        margin-bottom: 0px;
+        border-top: 1px solid lighten($main-color, 30%);
+        border-bottom: 1px solid lighten($main-color, 30%);
+    }
+
+    a {
+        font-size: 1.2em;
+    }
+
+    .links {
+        text-align: left;
+        span {
+            display: inline-block;
+            line-height: 38px;
+        }
     }
 }
 
+// Modal Styling Overrides
+.modal-content {
+    border-radius: 0px;
+}
+
+.modal-header {
+    padding: 5px;
+    padding-right: 6px;
+    border-bottom: none;
+}
+
+.modal-body {
+    padding-bottom: 0px;
+    padding-top: 0px;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.modal-footer {
+    margin-top: 0px;
+    border-top: none;
+}
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {

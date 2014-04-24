@@ -7,7 +7,11 @@ var ListView = Backbone.View.extend({
 		// $('.item-list').html('');
 		this.setHref();
 		this.render(),
-		$('.etsy-items').append( this.el )
+		$('.etsy-items').append( this.el ),
+		$('.etsy-item').click(function(){
+			$('.show-modal').click();
+			console.log('.show-modal was clicked');
+		});
 	}, 
 
 	renderedTemplate: _.template($('#etsy-item-template').text()),
@@ -38,4 +42,5 @@ var MainView = Backbone.View.extend({
 	render: function(){
 		this.$el.html(this.renderedTemplate(this.model))
 	}
+
 });
